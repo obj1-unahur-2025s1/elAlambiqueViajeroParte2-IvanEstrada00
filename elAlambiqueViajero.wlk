@@ -16,6 +16,40 @@ object luke{
     method vehiculo(nuevo) {vehiculo = nuevo}
 }
 
+object zapatillasConRuedas {
+
+    var usosRueda = 50000
+    var energia = 100
+    const gastoEnergia = 50
+    const friccionRueda = 100
+
+    method tieneCombustible() = usosRueda >= friccionRueda
+    method consumirCombustible() {
+        energia = energia - gastoEnergia
+        usosRueda = usosRueda - friccionRueda
+    } 
+}
+
+object antiguallaBlindada {
+    var gansterSubidos = []
+    var velocidad = 0
+    
+    method velocidad ()
+    {
+        velocidad = gangsters.nombresGanster().forEach()
+    }
+
+
+}
+
+object gangsters {
+var nombresGanster = #{"bab","beb","bib","bob","bub","bobo","raul"}
+
+    method nombresGanster() = nombresGanster
+
+
+}
+
 object alambiqueVeloz {
     var rapido = true
     var combustible = 20
@@ -102,7 +136,7 @@ object hurlingham{
 
 object moto{
     method rapido() = true
-    method puedeFuncionar() = not moto.rapido()
+    method puedeFuncionar() = not self.rapido()
     method desgaste() { }
     method patenteValida() = false
 }
